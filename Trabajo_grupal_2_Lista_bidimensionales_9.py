@@ -17,5 +17,6 @@ for i in range(len(matriz_identidad_inversa)):
             matriz_identidad_inversa[i][j] = 1
 #imprimimos la matriz          
 print(matriz_identidad_inversa)  
+#comprobando si es simetrica con su transpuesta
 es_simetrica = np.array_equal(matriz_identidad_inversa, matriz_identidad_inversa.T)
 print(es_simetrica)  # True
