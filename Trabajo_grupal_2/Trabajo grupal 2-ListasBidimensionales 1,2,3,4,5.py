@@ -57,9 +57,12 @@ matriz3 = [
     [4,5,6]
 ]
 
-#Solo necesito 1 bucle para recorrer las filas y sumarlas.
-for p in matriz3:
-    total2 = sum(p)
+contador_de_fila = 1
+
+for p in matriz3:          
+    total2 = 0             
+    for numero in p:        
+        total2 += numero   
     print(f"La Suma de la fila {contador_de_fila} es: {total2}")
     contador_de_fila += 1
 

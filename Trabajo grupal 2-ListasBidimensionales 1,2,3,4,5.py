@@ -45,7 +45,7 @@ total = sum(elemento for filaa in matriz2 for elemento in filaa)
 
 print("Suma de Todos los Elementos:",total)
 
-print("")
+print("") 
 
 #Ejercicio 3
 
