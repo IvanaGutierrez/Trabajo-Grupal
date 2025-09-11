@@ -1,27 +1,28 @@
-def rotar_matriz_90(matriz):
-    filas = len(matriz)
-    columnas = len(matriz[0])
-    # Creamos la matriz rotada con dimensiones invertidas
-    rotada = [[0] * filas for _ in range(columnas)]
-    
-    for i in range(filas):
-        for j in range(columnas):
-            rotada[j][filas - 1 - i] = matriz[i][j]
-    
-    return rotada
+filas = int(input("Ingresa cantidad de filas: "))
+columnas = int(input("Ingresa cantidad de columnas: "))
 
-# Ejemplo de uso
-matriz = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
+matriz = []
+for i in range(filas):
+    fila = []
+    for j in range(columnas):
+        valor = int(input(f"Ingrese elemento [{i}][{j}]: "))
+        fila.append(valor)
+    matriz.append(fila)
 
-print("Matriz original:")
+rotada = []
+for i in range(columnas):
+    fila_rotada = []
+    for j in range(filas):
+        fila_rotada.append(0)
+    rotada.append(fila_rotada)
+
+for i in range(filas):
+    for j in range(columnas):
+        rotada[j][filas - 1 - i] = matriz[i][j]
+
+print("\nMatriz original:")
 for fila in matriz:
     print(fila)
-
-rotada = rotar_matriz_90(matriz)
 
 print("\nMatriz rotada 90°:")
 for fila in rotada:
