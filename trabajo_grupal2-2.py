@@ -1,4 +1,9 @@
-numeros = list(map(int, input("Ingresa números separados por espacio: ").split()))
+n = int(input("¿Cuántos números tendrá la lista? "))
+numeros = []
+
+for i in range(n):
+    valor = int(input(f"Ingrese el número {i+1}: "))
+    numeros.append(valor)
 
 mayor = numeros[0]
 menor = numeros[0]
