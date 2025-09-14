@@ -28,7 +28,7 @@ while True:
 class FuncionesPrograma:
     @staticmethod
     def get_fecha_string(fecha):
-        dia, mes, anio = fecha.split("/")
+        dia, mes, año = fecha.split("/")
         dias = [
             "Uno", "Dos", "Tres", "Cuatro", "Cinco", "Seis", "Siete", "Ocho", "Nueve", "Diez",
             "Once", "Doce", "Trece", "Catorce", "Quince", "Dieciséis", "Diecisiete", "Dieciocho", "Diecinueve", "Veinte",
@@ -63,14 +63,14 @@ class FuncionesPrograma:
         else:
             mes_texto = "Mes inválido"
 
-        if anio == "1900":
-            anio_texto = "mil novecientos"
-        elif anio == "2000":
-            anio_texto = "dos mil"
+        if año == "1900":
+            año_texto = "mil novecientos"
+        elif año == "2000":
+            año_texto = "dos mil"
         else:
-            anio_texto = "año no definido"
+            año_texto = "año no definido"
 
-        return dia_texto + " de " + mes_texto + " de " + anio_texto
+        return dia_texto + " de " + mes_texto + " de " + año_texto
 fecha = input("Ingrese una fecha:")
 print(FuncionesPrograma.get_fecha_string(fecha))
 
